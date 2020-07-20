@@ -1,0 +1,10 @@
+INSERT INTO TesteMicroService.Pessoa VALUES ('f523acb6-3ee7-431f-875b-8cb07b2782cb', 'Thalyta Jessica Cavarsan de Camargo')
+
+SELECT * FROM TesteMicroService.Pessoa
+
+USE TesteMicroService;
+CREATE TABLE Pessoa
+(
+	Id CHAR(36) PRIMARY KEY,
+	Nome VARCHAR (50) 
+)

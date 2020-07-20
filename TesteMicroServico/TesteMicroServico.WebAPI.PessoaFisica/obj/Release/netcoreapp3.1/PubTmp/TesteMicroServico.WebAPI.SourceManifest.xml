@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<sitemanifest>
+  <IisApp path="C:\Projeto\Ativo\Repom\TesteMicroServico\TesteMicroServico.WebAPI.PessoaFisica\obj\Release\netcoreapp3.1\PubTmp\Out\" />
+</sitemanifest>

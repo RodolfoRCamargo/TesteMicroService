@@ -1,0 +1,5 @@
+1 - Criar imagem do MySQL no Docker ou servidor MySQL
+Escolher uma pasta e colar o arquivo "docker-compose". Abrir o terminal nessa pasta e executar "docker-compose up".
+
+2 - Criar o banco e tabela Pessoa Física
+Abrir a Solution e no terminal do Visual Studio usar o comando "Update-database" esse comando criará o banco e tabela Pessoa Física.

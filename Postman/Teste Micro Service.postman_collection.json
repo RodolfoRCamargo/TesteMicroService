@@ -1,0 +1,758 @@
+{
+	"info": {
+		"_postman_id": "d9222deb-572d-4132-889c-1658243dc2e5",
+		"name": "Teste Micro Service",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Pessoa Física",
+			"item": [
+				{
+					"name": "Cadastro",
+					"item": [
+						{
+							"name": "Listas todas as Pessoas Físicas",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://localhost:44347/CadastroPessoaFisica",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "44347",
+									"path": [
+										"CadastroPessoaFisica"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Incluir uma Pessoa Física",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{    \r\n    \"nome\" : \"Nova Pessoa Física\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://localhost:44347/CadastroPessoaFisica?nome=Nova Pessoa Física",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "44347",
+									"path": [
+										"CadastroPessoaFisica"
+									],
+									"query": [
+										{
+											"key": "nome",
+											"value": "Nova Pessoa Física"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Editar uma Pessoa Física",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{     \"id\" : \"08d82c0a-5ec1-49d6-88a7-31f0d08d4650\",\r\n    \"nome\" : \"Nova Pessoa Física Alterar\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://localhost:44347/CadastroPessoaFisica",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "44347",
+									"path": [
+										"CadastroPessoaFisica"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Excluir uma Pessoa Física",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "https://localhost:44347/cadastroPessoaFisica?id=08d82c0a-5ec1-49d6-88a7-31f0d08d4650",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "44347",
+									"path": [
+										"cadastroPessoaFisica"
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "08d82c0a-5ec1-49d6-88a7-31f0d08d4650"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Transação",
+					"item": [
+						{
+							"name": "Consultar Transações",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://localhost:44347/TransacaoPessoaFisica?tipoTransacao=Crédito",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "44347",
+									"path": [
+										"TransacaoPessoaFisica"
+									],
+									"query": [
+										{
+											"key": "tipoTransacao",
+											"value": "Crédito"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Realizar Transação",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{    \r\n    \"pessoa\": {\r\n        \"id\": \"08d82b82-929b-4412-86d5-42986fc3c9e6\"        \r\n    },\r\n    \"tipoTransacao\": \"Débito\",\r\n    \"valor\": 200    \r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://localhost:44347/TransacaoPessoaFisica",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "44347",
+									"path": [
+										"TransacaoPessoaFisica"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Pessoa Jurídica",
+			"item": [
+				{
+					"name": "Cadastro",
+					"item": [
+						{
+							"name": "Listar todas as Pessoas Jurídica",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://localhost:44347/CadastroPessoaJuridica",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "44347",
+									"path": [
+										"CadastroPessoaJuridica"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Incluir uma Pessoa Jurídica",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{    \r\n    \"nome\" : \"Nova Pessoa Física\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://localhost:44347/CadastroPessoaJuridica?nome=Nova Pessoa Jurídica",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "44347",
+									"path": [
+										"CadastroPessoaJuridica"
+									],
+									"query": [
+										{
+											"key": "nome",
+											"value": "Nova Pessoa Jurídica"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Editar uma Pessoa Jurídica",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{     \"id\" : \"08d82c31-50e1-46a8-8923-247eece16b69\",\r\n    \"nome\" : \"Nova Pessoa Física Alterar\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://localhost:44347/CadastroPessoaJuridica",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "44347",
+									"path": [
+										"CadastroPessoaJuridica"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Excluir uma Pessoa Jurídica",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "https://localhost:44347/cadastroPessoaJuridica?id=08d82c31-7afb-4e0d-8466-3979f89a03cb",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "44347",
+									"path": [
+										"cadastroPessoaJuridica"
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "08d82c31-7afb-4e0d-8466-3979f89a03cb"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Transação",
+					"item": [
+						{
+							"name": "Consultar Transações",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://localhost:44347/TransacaoPessoaJuridica?tipoTransacao=Débito",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "44347",
+									"path": [
+										"TransacaoPessoaJuridica"
+									],
+									"query": [
+										{
+											"key": "tipoTransacao",
+											"value": "Débito"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Realizar Transação",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{    \r\n    \"pessoa\": {\r\n        \"id\": \"08d82c31-8e66-4b7d-871e-7cf649a1ba90\"        \r\n    },\r\n    \"tipoTransacao\": \"Débito\",\r\n    \"valor\": 300    \r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://localhost:44347/TransacaoPessoaJuridica",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "44347",
+									"path": [
+										"TransacaoPessoaJuridica"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Pessoa Física Sem Banco",
+			"item": [
+				{
+					"name": "Cadastro",
+					"item": [
+						{
+							"name": "Listas todas as Pessoas Físicas",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://localhost:44347/CadastroPessoaFisicaSemBanco",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "44347",
+									"path": [
+										"CadastroPessoaFisicaSemBanco"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Incluir uma Pessoa Física",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{    \r\n    \"nome\" : \"Nova Pessoa Física\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://localhost:44347/CadastroPessoaFisicaSemBanco?nome=Nova Pessoa Física",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "44347",
+									"path": [
+										"CadastroPessoaFisicaSemBanco"
+									],
+									"query": [
+										{
+											"key": "nome",
+											"value": "Nova Pessoa Física"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Editar uma Pessoa Física",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{     \"id\" : \"08d82c0a-5ec1-49d6-88a7-31f0d08d4650\",\r\n    \"nome\" : \"Pessoa Física Alterada\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://localhost:44347/CadastroPessoaFisicaSemBanco",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "44347",
+									"path": [
+										"CadastroPessoaFisicaSemBanco"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Excluir uma Pessoa Física",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "https://localhost:44347/cadastroPessoaFisicaSemBanco?id=08d82c0a-5ec1-49d6-88a7-31f0d08d4650",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "44347",
+									"path": [
+										"cadastroPessoaFisicaSemBanco"
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "08d82c0a-5ec1-49d6-88a7-31f0d08d4650"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Transação",
+					"item": [
+						{
+							"name": "Consultar Transações",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://localhost:44347/TransacaoPessoaFisicaSemBanco",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "44347",
+									"path": [
+										"TransacaoPessoaFisicaSemBanco"
+									],
+									"query": [
+										{
+											"key": "tipoTransacao",
+											"value": "Débito",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Realizar Transação",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{    \r\n    \"pessoa\": {\r\n        \"id\": \"08d82b82-929b-4412-86d5-42986fc3c9e6\"        \r\n    },\r\n    \"tipoTransacao\": \"Débito\",\r\n    \"valor\": 200    \r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://localhost:44347/TransacaoPessoaFisicaSemBanco",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "44347",
+									"path": [
+										"TransacaoPessoaFisicaSemBanco"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Azure - Pessoa Física Sem Banco ",
+			"item": [
+				{
+					"name": "Cadastro",
+					"item": [
+						{
+							"name": "Listas todas as Pessoas Físicas",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://testemicroservice.azurewebsites.net//CadastroPessoaFisicaSemBanco",
+									"protocol": "https",
+									"host": [
+										"testemicroservice",
+										"azurewebsites",
+										"net"
+									],
+									"path": [
+										"",
+										"CadastroPessoaFisicaSemBanco"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Incluir uma Pessoa Física",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{    \r\n    \"nome\" : \"Nova Pessoa Física\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://testemicroservice.azurewebsites.net/CadastroPessoaFisicaSemBanco?nome=Nova Pessoa Física",
+									"protocol": "https",
+									"host": [
+										"testemicroservice",
+										"azurewebsites",
+										"net"
+									],
+									"path": [
+										"",
+										"CadastroPessoaFisicaSemBanco"
+									],
+									"query": [
+										{
+											"key": "nome",
+											"value": "Nova Pessoa Física"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Editar uma Pessoa Física",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{     \"id\" : \"08d82c0a-5ec1-49d6-88a7-31f0d08d4650\",\r\n    \"nome\" : \"Pessoa Física Alterada\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://testemicroservice.azurewebsites.net/CadastroPessoaFisicaSemBanco",
+									"protocol": "https",
+									"host": [
+										"testemicroservice",
+										"azurewebsites",
+										"net"
+									],
+									"path": [
+										"CadastroPessoaFisicaSemBanco"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Excluir uma Pessoa Física",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "https://testemicroservice.azurewebsites.net/cadastroPessoaFisicaSemBanco?id=08d82c0a-5ec1-49d6-88a7-31f0d08d4650",
+									"protocol": "https",
+									"host": [
+										"testemicroservice",
+										"azurewebsites",
+										"net"
+									],
+									"path": [
+										"cadastroPessoaFisicaSemBanco"
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "08d82c0a-5ec1-49d6-88a7-31f0d08d4650"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Transação",
+					"item": [
+						{
+							"name": "Consultar Transações",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://testemicroservice.azurewebsites.net/TransacaoPessoaFisicaSemBanco",
+									"protocol": "https",
+									"host": [
+										"testemicroservice",
+										"azurewebsites",
+										"net"
+									],
+									"path": [
+										"TransacaoPessoaFisicaSemBanco"
+									],
+									"query": [
+										{
+											"key": "tipoTransacao",
+											"value": "Débito",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Realizar Transação",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{    \r\n    \"pessoa\": {\r\n        \"id\": \"08d82b82-929b-4412-86d5-42986fc3c9e6\"        \r\n    },\r\n    \"tipoTransacao\": \"Débito\",\r\n    \"valor\": 200    \r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://testemicroservice.azurewebsites.net/TransacaoPessoaFisicaSemBanco",
+									"protocol": "https",
+									"host": [
+										"testemicroservice",
+										"azurewebsites",
+										"net"
+									],
+									"path": [
+										"TransacaoPessoaFisicaSemBanco"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				}
+			],
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "022b41d4-3f94-4c53-8edc-e74898514ff0",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "d045c9a3-30ea-4f4b-8e3f-d6f4001ed09e",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"protocolProfileBehavior": {}
+}
